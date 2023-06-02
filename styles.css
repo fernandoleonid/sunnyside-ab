@@ -3,6 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul, ol, li{
+    list-style: none;
+}
+
 
 :root{
     --text-font: 'Barlow', sans-serif;
@@ -79,6 +87,7 @@ header h1{
     color: var(--gray);
     text-align: center;
     line-height: 2rem;
+    padding: 0px 12px;
 }
 
 .description__link{
@@ -102,4 +111,138 @@ header h1{
 
 .line-yellow{
     background-color: var(--yellow);
+}
+
+.line-red{
+    background-color: var(--red);
+}
+
+.container{
+    background-color: tomato;
+    height: 600px;
+    background-size: cover;
+}
+
+.container.graphic{
+    background-image: url(./images/mobile/image-graphic-design.jpg);
+}
+.container.photography{
+    background-image: url(./images/mobile/image-photography.jpg);
+}
+
+.container.graphic *{
+    color: var(--graphic-text);
+}
+
+.container.photography *{
+    color: var(--photography-text);
+}
+
+.container .description{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 16px;
+}
+
+.testimonials{
+    display: grid;
+    place-items: center;
+}
+.testimonials-title{
+    font-family: var(--title-font);
+    font-size: 1.1rem;
+    letter-spacing: .2rem;
+    color: var(--gray);
+    padding: 32px 0;
+}
+
+.client{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    height: 400px;
+    text-align: center;
+}
+
+.client__avatar{
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+}
+
+.client__avatar.client1{
+    background-image: url(./images/image-emily.jpg);
+}
+
+.client__avatar.client2{
+    background-image: url(./images/image-thomas.jpg);
+}
+
+.client__avatar.client3{
+    background-image: url(./images/image-jennie.jpg);
+}
+
+.client__text{
+    font-size: 1.2rem;
+    font-weight: 600;
+    opacity: .7;
+    line-height: 2rem;
+    padding: 0px 12px;
+}
+
+.client__name{
+    font-family: var(--title-font);
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.client__job{
+    color: var(--gray);
+    font-weight: 600;
+    padding: 12px;
+}
+
+.images{
+    display: grid;
+    grid-template-columns: 1fr 1fr;   
+}
+
+.images img{
+    width: 100%;
+}
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 400px;
+    background-color: #90D4C5;
+    color: var(--footer-bg);
+
+}
+
+footer h2{
+    font-size: 2.2rem;
+    font-weight: 900;
+}
+
+footer nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100vw;
+    font-weight: 600;
+}
+
+footer>ul{
+    display: flex;
+    justify-content: center;
+    gap: 32px;
 }
